@@ -8,6 +8,17 @@
     */
 
     //ENTRADA
+    let listaDeNumeros = [4, 8, 12, 35, 78, 83, 5, 22, 49, 95];
+    let abaixo50 = [];
+    let acima50 = []; 
+    let acima = 0;
+    let abaixo = 0;
+
+    for (n of listaDeNumeros) {
+        (n < 50) ? abaixo50.push(n) : acima50.push(n);
+        (n < 50) ? abaixo++ : acima++;
+    }
+    alert(`Os seguintes números são menores que cinquenta: ${abaixo50}, representado ${abaixo / 10}%\nOs seguintes números são maiores que cinquenta: ${acima50}, representando ${acima / 10}%`);
 
     
     //PROCESSAMENTO
