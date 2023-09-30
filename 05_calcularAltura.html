@@ -8,8 +8,14 @@
     */
 
     //ENTRADA
-
-    
+    const quantidadePessoas = Number(prompt('Digite a quantiade de pessoas: '));
+    let array = [];
+    for (let i = 1; i <=quantidadePessoas; i++) {
+        let altura = Number(prompt('Digite a altura da pessoa em centímetros: '));
+        array.push(altura);
+    }
+    array.sort((a, b) => {return a-b});    
+    alert(`A menor altura é ${array[0]} e a maior altura é ${array[array.length - 1]}`);
     //PROCESSAMENTO
     
     
