@@ -15,8 +15,15 @@
     */
 
     //ENTRADA
-
-    
+    const quantidadeTomate = Number((prompt('Informe quantos quilos de tomate foram vendidos: ').replace(',', '.'))) * 3.9;
+    const quantidadeBatata = Number((prompt('Digite quantos quilos de batata foram vendidos: ').replace(',', '.'))) * 3.4;
+    const quantidadeBatata_doce = Number((prompt('Informe quantos quilos de batata doce foram ').replace(',', '.'))) * 4.7;
+    const quantidadeAlface = Number(prompt('Digite a quantidade de alfaces vendidas: ')) * 1.5;
+    const quantidadeCebola = Number((prompt('Digite quantos quantos quilos de cebola foram vendidos')).replace(',', '.')) * 2.9;
+    const quantidadeCebolinha = Number(prompt('Digite a quantidade de cebolinhas vendidas')) * 1.4;
+    const quantidadeBeterraba = Number((prompt('Informe quantos quilos de beterraba foram vendidos')).replace(',', '.')) * 4.1;
+    const soma = quantidadeAlface +quantidadeAlface + quantidadeBatata_doce + quantidadeBeterraba + quantidadeCebola + quantidadeCebolinha + quantidadeTomate;
+    alert(`O seu faturamento foi de R$ ${soma.toFixed(2)}`);
     //PROCESSAMENTO
     
     
