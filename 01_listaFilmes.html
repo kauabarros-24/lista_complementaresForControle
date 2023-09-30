@@ -1,3 +1,4 @@
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
 <script>
     //PROBLEMA
     /*
@@ -9,12 +10,33 @@
     */
 
     //ENTRADA
+    const numeroFilmes = Number(prompt('Digite a quantidade de filmes que deseja cadastrar: '));
+    let listaComedia = [];
+    let listaRomance = [];
+    let listaDrama = [];
+    let mensagem = ``;
 
-    
+
+
     //PROCESSAMENTO
-    
-    
+    for (let i = 1; i <= numeroFilmes; i++) {
+        let nomeFilme = prompt('Digite o nome do filme: ').trim();
+        let generoFilme = prompt(('Digite se o filme é de comédia, drama ou romance: ').replace('é', 'e')).trim().toLowerCase();
+        (generoFilme == 'drama') ? listaDrama.push(nomeFilme) : (generoFilme == 'comedia') ? listaComedia.push(nomeFilme) : listaRomance.push(nomeFilme);
+    }
+    if (listaDrama.length > 0)
+        mensagem = mensagem + `No gênero drama existe(m) o(s) seguinte(s) filme(s): ${listaDrama}\n`;
+    if (listaComedia.length > 0)
+        mensagem = mensagem + `No gênero comédia existe(s) o(s) seguinte(s) filme(s): ${listaComedia}\n`;
+    if (listaRomance.length > 0)
+        mensagem = mensagem + `No gênero romance existe(s) o(s) seguinte(s) filme(s): ${listaRomance}\n`;
+    document.write(mensagem);
+    alert(mensagem);
+
+
+
+
     //SAÍDA
-    
-    
+
+
 </script>
