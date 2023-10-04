@@ -14,7 +14,23 @@
     */
 
     //ENTRADA
+    array = [];
+    let adolescente = 0;
+    let jovem = 0;
+    let adulto = 0;
+    let meiaIdade = 0;
+    let idoso = 0;
 
+
+    for (let i = 1; i <=10 ; i++) {
+    let idadePessoa = Number(prompt('Digite a idade da pessoa: '));
+    (idadePessoa <= 15) ? adolescente++ : (idadePessoa <= 30) ? jovem++ : (idadePessoa <= 45) ? adulto++ : (idadePessoa <= 60) ? meiaIdade++ : idoso++;
+    array.push(idadePessoa);
+    }
+    
+
+    alert(`Para a faixa etária menor ou igual á 15 anos, temos ${adolescente} pessoas, representando ${(adolescente * 10)}% do grupo\nPara a faixa etária maior de 16 e menor que 30, temos ${jovem} pessoas, representando ${jovem * 10}% do grupo\nPara a faixa etária maior que 31 e menor que 45, temos ${adulto} pessoas, ${(adulto * 10)}% do grupo\nPara a faixa etária mairo que 46 e menor que 60, temos ${meiaIdade} pessoas, representando ${(meiaIdade * 10)}% do grupo\nPara os idosos, temos ${idoso} pessoas, representando ${(idoso * 10)}% do grupo`);
+    
     
     //PROCESSAMENTO
     
