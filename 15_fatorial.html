@@ -1,3 +1,4 @@
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
 <script>
     //PROBLEMA
     /*
@@ -7,13 +8,13 @@
     */
 
     //ENTRADA
-    let numeroInformado = Number(prompt('Digite um número inteiro e positivo: '))
+    let numero = Number(prompt('Digite um número positivo e inteiro: '));
+    let resultado = 1
 
-    
-    //PROCESSAMENTO
-    
-    
-    //SAÍDA
-    
+    if (numero < 1) {numero = Number(prompt('Insira o número corretamente! '));}
+    else if (Number.isInteger(numero) == false) {numero = Number(prompt('Insira o número corretamente! '));}
+    else {for(let i = numero; i >= 1; i--){resultado = resultado * i}}
 
+
+    alert(resultado);
 </script>
