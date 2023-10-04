@@ -11,9 +11,14 @@
     5 x 8 = 40
     */
 
-    //ENTRADA
+    //ENTRADA   
+    const numeroEscolhido = Number(prompt('Digite o número: '));
+    const inicio = Number(prompt('Digite o número inical: '));
+    const final = Number(prompt('Digite o número final'));
 
-    
+
+    for (let i = inicio; i <= final; i++) {if ((numeroEscolhido * i) % 2 == 0 ) {document.write(`<li>${numeroEscolhido} * ${i} = ${(numeroEscolhido * i)}<li>`)}}
+
     //PROCESSAMENTO
     
     
