@@ -1,3 +1,4 @@
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
 <script>
     //PROBLEMA
     /*
@@ -8,6 +9,19 @@
     */
 
     //ENTRADA
+    let quantosNumeros = Number(prompt('Digite quantos números deseja exibir da sequência fibonacci: '));
+    r1 = 0
+    r2 = 1
+    r3 = 0
+    lista = [];
+    for (let i = 1; i <=  quantosNumeros; i++) {
+       r1 = r2 + r3;
+       r2 = r3;
+       r3 = r1;
+        lista.push(r3);
+        
+    }
+    document.write(`${lista}`)
     
 
     
