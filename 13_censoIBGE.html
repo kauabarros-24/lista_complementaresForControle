@@ -12,6 +12,7 @@
     */ 
 
     //ENTRADA
+
     let salarios = [1200, 2500, 3000, 9000, 850, 4000, 1500, 2300, 3800, 1600];
     let numeroDeFilhos = [1, 2, 2, 1, 3, 2, 3, 3, 0, 4];
     let soma2 = 0;
@@ -24,10 +25,9 @@
     for (n of numeroDeFilhos) {soma2 = n + soma2;}
     for (n of salarios) {soma1 = n + soma1;}
     for (n of salarios) {if (n >= 3000) c++}
-   
-    
+
     //SAÍDA
+
     alert(`A média de filhos por família é igual á ${Math.floor(soma2 / numeroDeFilhos.length)}\nA média salarial é R$ ${((soma1 / salarios.length).toFixed(2).replace('.', ','))}\nA porcentagem de pessoas que pessoas que ganham mais de R$ 3000,00 é ${(c * 10)}%\nO maior salário é R$ ${(salarios[0].toFixed(2)).replace('.', ',')}`);
     
-
 </script>
