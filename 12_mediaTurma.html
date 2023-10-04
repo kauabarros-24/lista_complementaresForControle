@@ -11,7 +11,7 @@
     let notasProgramacaoI = [4, 3, 5, 10, 9, 2, 7, 10, 8, 7, 6, 1, 5, 2, 3];
     notasProgramacaoI.sort((a, b) => {return a - b});
     let media = 0;
-     for (n of notasProgramacaoI) {media = media + n / notasProgramacaoI.length}
+    for (n of notasProgramacaoI) {media = media + n / notasProgramacaoI.length}
     alert(`A menor nota é ${notasProgramacaoI[0]}\nA maior nota é ${notasProgramacaoI[notasProgramacaoI.length - 1]}\nA média da turma é ${(media.toFixed(2)).replace('.', ',')}`);
 
 
