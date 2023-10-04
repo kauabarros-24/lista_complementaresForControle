@@ -7,8 +7,13 @@
     */
 
     //ENTRADA
-    let quantiaInvestida = Number((prompt('Digite quantos reais investiu: ')).replace(',', '.'));   
+    let meses = 0
     
+   
+    for (let saldo = 10000; saldo >= 0; saldo = (saldo - 300) * 1.03) {
+        meses++;
+    }
+    alert(`Demorará ${meses} para acabar o dinheiro`);
 
     //PROCESSAMENTO
     
