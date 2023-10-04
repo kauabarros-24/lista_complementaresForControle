@@ -6,11 +6,16 @@
     Apresente, ao fim do programa, a massa inicial, massa final e o necessário para que atinja a massa determinada.
     */
 
-    //ENTRADA
+    //ENTRADA       
+    let tempo = 0;
+  
+    //PROCESSAMENTO
+    for (let massa = Number((prompt('Digite a massa do objeto: ')).replace(',', '.')); massa >=1; massa = massa - massa * 0.12) {
+        tempo++;
+    }
+    alert(`Demorará ${tempo}s para a massa decair`);
     
 
-    
-    //PROCESSAMENTO
     
     
     //SAÍDA
