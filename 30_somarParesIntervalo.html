@@ -11,12 +11,24 @@
     */
 
     //ENTRADA
+    const limiteInferior = Number(prompt('Digite o limite inferior: '));
+    const limiteSuperior = Number(prompt('Digite o limite superior: '));
+    let soma = 0;
+    let array = [];
 
-    
     //PROCESSAMENTO
-    
-    
+
+    for (let i = limiteInferior; i <= limiteSuperior; i++) {
+        if (i % 2 == 0) {
+            soma += i;
+            array.push(i);
+
+        }
+    }
+    alert(`Os números pares entre ${limiteInferior} e ${limiteSuperior} são / é ${array}\nA soma entre eles é igual a ${soma}`);
+
+
     //SAÍDA
-    
+
 
 </script>
