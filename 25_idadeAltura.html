@@ -5,14 +5,36 @@
     Calcule e apresente os seguintes dados:
     - Média do peso das pessoas que possuem mais de 50 anos
     - Média do peso das pessoas que possuem menos de 25 anos
-    - Média do peso de todas as pessoas
+    - Média do peso (O correto é massa) de todas as pessoas
     */
 
     //ENTRADA
+    let contador25 = 0;
+    let peso25 = 0;
+    let peso50 = 0;
+    let contador50 = 0;
+    let somaPeso = 0;
 
-    
     //PROCESSAMENTO
+    for (let i = 1; i <= 10; i++) {
+        let idade = Number(prompt("Digite a sua idade: "));
+        let peso = Number((prompt('Digite a sua massa corporal')).replace(',', '.'));
+        somaPeso+=peso;
+        if (idade <= 25) {
+            peso25+=peso;
+            contador25++;
+        }
+        else if (idade >= 50) {
+            peso50+=peso;
+            contador50++;
+        }
+        else {
+            console.log('python é a melhor linguagem');
+        }
     
+    }
+    document.write(`A média da massa corpórea entre pessoas com 25 anos ou menos é ${(peso25 / contador25).toFixed(1).replace('.', ',')}kg<br>A média de massa corpórea de pessoas com 50 anos ou mais é ${(peso50 / contador50).toFixed(1).replace('.', ',')}kg<br>A média de massa corpórea das pessoas é ${(somaPeso / 10).toFixed(1).replace('.', ',')}kg`)
+
     
     //SAÍDA
     
