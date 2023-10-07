@@ -6,7 +6,22 @@
     */
 
     //ENTRADA
+    let lista = [];
+    let contador = 0;
+    for (let i = 1; i<=10; i++) {
+        let numero = Number(prompt('Digite um número: '));
+        if (numero >= 100 && numero <= 200) {
+            lista.push(numero);
+            contador++;
+            
+        }
+    
+    }
 
+  
+   (lista.length > 0) ? alert(`Os seguintes números digitados fazem parte do intervalo ${lista}\nA porcentagem dos numeros no intervalo  é ${(contador / 10)}%`) : alert('Não há nada aqui');
+    
+    
     
     //PROCESSAMENTO
     
