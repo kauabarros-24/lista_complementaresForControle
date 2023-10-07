@@ -1,4 +1,6 @@
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
 <script>
+
     //PROBLEMA
     /*
     Considere que uma loja utiliza o identificador V para transações à vista e P para transações parceladas.
@@ -9,10 +11,32 @@
     - Total das compras efetuadas
     - O valor da primeira prestação das compras a prazo, considerando que serão pagas em três vezes.
     */
-
-    //ENTRADA
-
     
+    //ENTRADA
+    let listaParcelada = [];
+    let listaVista = [];
+    let subListaParcelada = [];
+    let contador = 0;
+
+    for (let i = 1; i <= 10; i++) {
+        let valorTransação = Number(prompt('Digite o valor da transação: ').replace(',', '.'));
+        let tipoTransação = prompt('Digite se a transação for à vista [V] ou à prazo [P]').trim().toUpperCase();
+
+        (tipoTransação == 'P' || tipoTransação == 'PRAZO' || tipoTransação == 'PARCELADA') ? listaParcelada.push(valorTransação) : listaVista.push(valorTransação);
+    }
+    for (n of listaParcelada) {contador++; if (contador % 3 == 0) {subListaParcelada.push(n);}};
+
+    document.write(`Você comprou ${listaVista.length} produtos à vista<br>Você comprou um total de ${subListaParcelada.length} produtos parcelados<br>O total de compras esfetuadas é ${(subListaParcelada.length + listaVista.length)}`);
+    
+    for (n of subListaParcelada) {
+        alert((`Essa é a primeira prestação das parcela: R$ ${n} `).replace('.', '.'))
+    }
+
+
+
+
+
+
     //PROCESSAMENTO
     
     
