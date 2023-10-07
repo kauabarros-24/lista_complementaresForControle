@@ -11,7 +11,21 @@
     */
 
     //ENTRADA
+    const quantasPessoas = Number(prompt('Digite quantas pessoas vão responder: '));
+    let idadeRegular = 0;
+    let idadeBom = 0
+    let mediaGeral = 0;
+    let contadorBom = 0;
+    let contadorRegular = 0;
 
+    for (let i = 1; i<= quantasPessoas; i++) {
+        let classificacao = prompt('Digite "R" para classificar o filme como regular e "B" para classificar o filme como bom').trim().toUpperCase();
+        let idade = Number(prompt('Digite a sua idade: '));
+        if (classificacao == 'R' || classificacao == 'REGULAR') {idadeRegular+=idade;contadorRegular++;}
+        else {idadeBom+=idade;contadorBom++;}
+        mediaGeral+=idade
+    }
+    document.write((`A média de idades que classificou o filme como regular é ${(idadeRegular / contadorRegular)} anos, representando um total de ${((contadorRegular / (contadorBom + contadorRegular)) * 100 ).toFixed(1).replace('.', ',')}% das pessoas que assistiram o filme<br>A média de idade que classificou o filme como bom é ${(idadeBom / ((contadorBom + contadorRegular) - contadorRegular))} anos, representando um total de ${((((contadorBom + contadorRegular) - contadorRegular) / (contadorBom + contadorRegular)) * 100).toFixed(1).replace('.', ',')}%<br>A média da idade das pessoas que assistiram o filme é ${Math.round(mediaGeral / (contadorRegular + contadorBom))} anos`));
     
     //PROCESSAMENTO
     
