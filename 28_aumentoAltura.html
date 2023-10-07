@@ -7,6 +7,18 @@
     */
 
     //ENTRADA
+    let alturaZ = 1.3;
+    let alturaJ = 1.5;
+    for (let i = 1; i <= 30; i++) {
+        alturaJ = alturaJ + 0.02;
+        alturaZ = alturaZ + 0.03;
+        if (alturaJ <= alturaZ) {
+            alert(`Para que Zezinho atinja a altura de Joãozinho demorará ${i} anos`);
+            break;
+        }
+    
+        
+    }
 
     
     //PROCESSAMENTO
