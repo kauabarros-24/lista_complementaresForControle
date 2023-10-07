@@ -6,6 +6,16 @@
     */
 
     //ENTRADA
+    let contador = [];
+    for (let i  = 1000; i <= 1500; i++) {
+        if (i %11 == 5) {
+            contador++;
+            if (contador == 5) {
+                alert(i);
+                break;
+            }
+        }
+    }
 
     
     //PROCESSAMENTO
