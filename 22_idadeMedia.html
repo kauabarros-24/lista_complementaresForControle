@@ -1,3 +1,4 @@
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
 <script>
     //PROBLEMA
     /*
@@ -9,12 +10,23 @@
     */
 
     //ENTRADA
+    let media = 0;
+    let contadorHomem = 0;
+    let contadorMulher = 0;
+    let idadeHomem = 0;
+    let idadeMulher = 0;
 
-    
     //PROCESSAMENTO
-    
-    
+    for (let i = 1; i <= 10; i++) {
+        let idade = Number(prompt('Digite a sua idade: '));
+        let sexo = prompt('Digite se é homem ou mulher: ').trim().toUpperCase();
+        if (sexo == 'M' || sexo == 'H' || sexo == 'MASCULINO' || sexo == 'HOMEM' || sexo == 'MAN'){ contadorHomem++; idadeHomem += idade; }
+        else { contadorMulher++; idadeMulher += idade; }
+        media = media + idade
+    }
+    alert((`A média de idade é ${(media / 10)} anos\nA média feminina de idade é ${(idadeMulher / contadorMulher)} anos\nA média de idade masculina é ${(idadeHomem / contadorHomem)} anos`).replace('.', ','));
+
     //SAÍDA
-    
+
 
 </script>
