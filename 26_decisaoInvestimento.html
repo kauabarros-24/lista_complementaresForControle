@@ -9,6 +9,21 @@
     */
 
     //ENTRADA
+   
+    const tipoInvestimeno = prompt('Digite qual tipo de investimento irá realizar: ').trim().toUpperCase();
+    let valorInvestimento = Number((prompt('Digite o valor do investimento: ')).replace('.', ','));
+    for (let i = 0; i<= 36; i++) {
+        if (tipoInvestimeno == 'POUPANCA' || tipoInvestimeno == 'POUPANÇA' || tipoInvestimeno == 'P') {
+            valorInvestimento = valorInvestimento + valorInvestimento * (0.15 / 10);
+        }
+        else if (tipoInvestimeno == 'PP' || tipoInvestimeno == 'PPP' || tipoInvestimeno == 'POUPANÇA PLUS' || tipoInvestimeno == 'POUPANPCA PLUS') {
+            valorInvestimento = valorInvestimento + valorInvestimento * (0.2 / 10);
+        }
+        else {
+            valorInvestimento = valorInvestimento + valorInvestimento * (0.4 / 10);
+        }
+    }
+    alert(`O valor investido rendeu R$ ${valorInvestimento.toFixed(2).replace('.', ',')}`);
 
     
     //PROCESSAMENTO
