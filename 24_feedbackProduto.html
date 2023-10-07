@@ -1,3 +1,4 @@
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
 <script>
     //PROBLEMA
     /*
@@ -10,17 +11,36 @@
     - Percentual de homens que responderam não entre todos os homens analisados
     */
 
-    //ENTRADA
+    let geralSim = 0;
+    let geralNao = 0;
+    let mulherSim = 0;
+    let contadorHomem = 0;
+    let contadorHomemNao = 0;
 
+    for (let i = 1; i <= 10; i++) {
+        let gostou = prompt('Digite se gostou ou não do produto: ').trim().toUpperCase();
+        let sexo = prompt('Digite se é homem ou mulher: ').trim().toUpperCase();
+        if (sexo == 'M' || sexo == 'HOMEM') {
+            contadorHomem++;
+            if (gostou == 'N' || gostou == 'NÃO' || gostou == 'NAO') {
+                contadorHomemNao++;
+                geralNao++;
+            }
+            else {
+                geralSim++;
+            }
+        }
+        else {
+            if (gostou == 'SIM' || gostou == 'S') {
+                geralSim++;
+                mulherSim++;
+            }
+            else {
+                geralNao++;
+            }
+        }
+    }
+    document.write(`${geralSim} pessoas gostaram do produto<br>${geralNao} pessoas não gostaram do produto<br>${mulherSim} mulheres gostaram do produto<br>${((contadorHomemNao / contadorHomem) * 100)}% dos homens não gostaram do produto`);
 
-    //PROCESSAMENTO
-    //ENTRADA
-
-    
-    //PROCESSAMENTO
-    
-    
-    //SAÍDA
-    
 
 </script>
