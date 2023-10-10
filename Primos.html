@@ -1,0 +1,25 @@
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<script>
+    const quantidadadePrimos = Number(prompt('Digite a quantidade de primos que deseja descobrir: '));
+    if (quantidadadePrimos >= 110) quantidadadePrimos = Number(prompt('Erro!\nQuantidade de primos muito grande: '));
+    let lista = [];
+    let contadorPrimo = 2;
+    let contador = 0;
+    let x = 60013;
+
+    for (let i = 1; i <= quantidadadePrimos; i++) {
+        for (let c = 1; c <= x; c++) {
+        if (c % i == 0) {
+                divisibilidade++;
+        }
+        }
+        if (divisibilidade == 2) {
+            alert(`O número ${numeroPrimo} é primo`);
+        }
+        else {
+            alert('Não é primo');
+        }
+    }
+
+
+</script>

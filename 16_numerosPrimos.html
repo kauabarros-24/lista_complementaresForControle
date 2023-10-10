@@ -7,9 +7,34 @@
     Apresente a lista de números primos na tela.
     */
 
+    // Para isso eu tenho que pegar o número e testar todos os números antes dele. Se ele tiver dois divisores 
+    //é primo
+
     //ENTRADA
     //PROCESSAMENTO
-    const quantidadePrimos = Number(prompt('Digite quantos números primos deseja descobrir'));
+    const quantidadePrimos = Number(prompt('Digite a quantidade de primos que deseja descobrir: '));
+    let listaPrimos = [];
+    let contadorPrimos = 0;
+    
+    for (let i = 1; i <= quantidadePrimos; i++) {
+        for (let c = 2; c != 1; c++) {
+            let o = c;
+            while (o >= 1) {
+                if  (c / o == 0) {
+                    contadorPrimos++;
+                    o--;
+                    if (contadorPrimos == 2) {
+                        listaPrimos.push(c);
+                        contadorPrimos = 0;
+                        o = c;
+                        console.log('Funcionei"')
+
+                    }
+                }
+            }
+        }
+    }
+    
 
 
 
